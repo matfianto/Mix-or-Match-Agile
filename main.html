@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mix-Or-Match-Agile</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker">
+    <link rel="stylesheet" href="css/app.css">
+    <audio src="Audio/creepy.mp3" autoplay="true" loop="true"></audio>
+</head>
+
+<body style="background-image: url('img/bg-page.jpg');
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: 0 0;
+background-size: cover;">
+
+    <div class="container">
+        <header>
+            <h1>Mix-Or-Match-Agile</h1>
+        </header>
+
+        <section class="score-panel">
+            <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+
+            <span class="moves">0</span> Flip
+
+            <div class="timer">
+            </div>
+
+            <div class="restart" onclick=startGame()>
+                <span class="ulangi"></span><i class="fa fa-repeat"></i><span class="ulangi"> Ulangi Permainan</span>
+            </div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+
+            <li class="card" type="diamond">
+                <img src="img/image.jpg" alt="image">
+                <!-- <i class="fa fa-diamond"></i> -->
+            </li>
+            <li class="card" type="diamond">
+                <img src="img/image.jpg" alt="image">
+                <!-- <i class="fa fa-diamond"></i> -->
+            </li>
+
+            <li class="card" type="plane">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="bolt">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card open show" type="bolt">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="plane">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
+        </ul>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Selamat 👍</h2>
+                <a class="close" href=#>×</a>
+                <div class="content-1">
+                    Selamat telah menyelesaikan permainan ini 🎉🎉
+                </div>
+                <div class="content-2">
+                    <p>Anda telah melakukan <span id=finalMove> </span> kali flips (membuka) kartu 🃏</p>
+                    <p>dalam waktu <span id=totalTime> </span> ⏱</p>
+                    <p>Rating anda : <span id=starRating></span> / <i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i> tetap semangat ! 💪</p>
+                </div>
+                <button id="play-again" onclick="playAgain()">
+                    Main Lagi 😄</a>
+                </button>
+            </div>
+        </div>
+
+        <p id="kembali"><a href="index.html">Kembali ke Menu</a></p>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
